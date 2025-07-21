@@ -200,19 +200,46 @@ body {
 }
 
 .trails-container-main {
-  border: 1px solid green;
   width: 80%;
-  height: 500px;
+  height: 700px;
   margin: 0 auto;
   background-color: var(--color-secondary-black);
   display: flex;
+  align-items: center;
 }
 
 .trails__image-container {
-  border: 1px solid green;
   width: 35%;
   height: 100%;
+  background-color: antiquewhite;
 }
 
 .trails__container {
+  width: 40%;
+  height: 80%;
+  border: 1px solid green;
+  margin: 0 auto;
+}
+
+.trails__title {
+  text-align: left;
+}
+
+.trails__items {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.item-content {
+  justify-self: start;
+  align-self: start;
+}
+
+.item-btn {
+  justify-self: end;
+  align-self: start;
 }
