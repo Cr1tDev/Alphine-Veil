@@ -335,7 +335,7 @@ body {
 
 /* Section 3 */
 .section-3 {
-  height: 900px;
+  height: 1000px;
   width: 100%;
   border: 1px solid green;
   position: relative;
@@ -357,10 +357,109 @@ body {
   text-align: center;
   align-self: center;
   flex: 1.5;
-  border: 1px solid green;
+}
+
+.experience-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 5.5rem;
+  font-weight: 700;
+}
+
+.experience-sub-text {
+  width: 60%;
+  margin: 30px auto;
+  font-size: 1.4rem;
+  font-weight: 200;
+}
+
+.expe-name {
+  margin-top: 30px;
 }
 
 .experience-img {
-  flex: auto;
+  overflow: hidden;
+}
+
+.experience-img {
+  flex: 1;
+  background-image: url(/img/hikers.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.news-container {
+  width: 100%;
+  height: 700px;
+  border: 1px solid green;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sleet-news-container {
+  border: 1px solid red;
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.news-title {
+  font-size: 5.5rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  color: #1c1c1c;
+}
+
+.news-text {
+  width: 60%;
+  font-size: 1.7rem;
+  font-weight: 300;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+
+.news-box {
+  width: 100%;
+  border: 1px solid blue;
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.news-card {
+  flex: 1;
+  height: 200px;
+}
+
+.news-img {
+  height: 200px;
   background-color: antiquewhite;
+}
+
+.news-context {
+  background-color: var(--color-secondary-black);
+  text-align: left;
+  height: 100%;
+  padding: 3rem 2rem;
+}
+
+.news-title-sub {
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.news-blogs {
+  border: 1px solid green;
+}
+
+.eye-icon {
+  width: 24px;
 }
