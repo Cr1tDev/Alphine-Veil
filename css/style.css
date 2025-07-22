@@ -276,13 +276,14 @@ body {
 /* Section 2 */
 .section-2 {
   height: 1000px;
+  width: 100%;
   text-align: center;
   position: relative;
 }
 
 .winter-container {
   height: 600px;
-  /* top: 50%; */
+  top: 45%;
   justify-content: space-between;
 }
 
@@ -330,4 +331,36 @@ body {
 .btn-white:hover {
   background-color: #1c1c1c;
   color: #fff;
+}
+
+/* Section 3 */
+.section-3 {
+  height: 900px;
+  width: 100%;
+  border: 1px solid green;
+  position: relative;
+}
+
+.experience-continer {
+  width: 80%;
+  height: 450px;
+  background-color: var(--color-secondary-black);
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.experience-content {
+  color: #fff;
+  text-align: center;
+  align-self: center;
+  flex: 1.5;
+  border: 1px solid green;
+}
+
+.experience-img {
+  flex: auto;
+  background-color: antiquewhite;
 }
