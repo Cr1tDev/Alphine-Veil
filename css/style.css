@@ -104,15 +104,62 @@ body {
 }
 
 .nav-profile-text {
-  font-size: 1.6rem;
+  margin-top: 2px;
+  font-size: 1.7rem;
   color: var(--color-red);
   font-weight: 300;
   cursor: pointer;
   transition: all 0.3s;
 }
 
-.nav-profile-text:hover {
-  opacity: 0.9;
+.login-btn-alt {
+  background-color: var(--color-primary-black);
+  border: none;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.login-btn-alt:hover {
+}
+
+.login-btn-alt:hover .nav-profile-text {
+  transform: translateY(-1px);
+  opacity: 0.8;
+}
+
+.profile-icon-container {
+  width: 32px;
+  height: 32px;
+  background-color: #ff2929;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-icon-svg {
+  width: 30px;
+  height: 30px;
+  fill: #000000;
+}
+
+.demo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.demo-title {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 /* Header */
@@ -400,10 +447,11 @@ body {
 }
 
 .sleet {
-  height: 800px;
   position: absolute;
-  display: inline-block;
-  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 3%;
 }
 
 .parallax-background {
@@ -440,37 +488,43 @@ body {
 }
 
 .sleet-card {
-  width: 70%;
-  height: 400px;
+  width: 60%;
   display: flex;
-  gap: 30px;
-  margin: 0 auto;
-  margin-top: 60px;
+  gap: 25px;
+  margin: 70px 0 auto;
 }
 
 .card {
   flex: 1;
   position: relative;
   overflow: hidden;
-  min-height: 350px;
+  height: 360px;
 }
 
 .card-img {
-  background-color: antiquewhite;
   height: 60%;
+  overflow: hidden;
+}
+
+.card-images {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .card-overlay {
   color: #fff;
-  height: 40%;
   padding: 2rem;
   background-color: var(--color-secondary-black);
 }
 
+.title-container {
+  height: 70px;
+}
+
 .card-title {
-  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-size: 1.8rem;
   font-weight: 700;
-  border-bottom: 1px solid #fff;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -536,7 +590,7 @@ body {
 }
 
 /* Mobile Responsive */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .sleet-card {
     flex-direction: column;
     width: 95%;
@@ -577,7 +631,7 @@ body {
     padding: 4px 8px;
     font-size: 12px;
   }
-}
+} */
 
 /* Section 4 */
 .footer {
@@ -588,14 +642,20 @@ body {
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 1250px;
   margin: 0 auto;
-  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 40px;
+}
+
+.footer-nav-container {
+  display: flex;
+  width: 400px;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .footer-logo {
@@ -662,13 +722,13 @@ body {
 }
 
 .book-now-btn {
-  background-color: #ff4444;
-  color: white;
-  padding: 12px 25px;
+  background-color: var(--color-red);
+  color: #fff;
+  padding: 1rem 2rem;
   border: none;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: bold;
+  border-radius: 2px;
+  font-size: 1.5rem;
+  font-weight: 400;
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-decoration: none;
@@ -681,13 +741,12 @@ body {
 
 .footer-bottom {
   margin-top: 40px;
-  padding-top: 20px;
-  border-top: 1px solid #444;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+  width: 100%;
 }
 
 .copyright {
@@ -726,16 +785,15 @@ body {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: #ff4444;
+  background-color: var(--color-red);
   color: white;
   border: none;
-  border-radius: 25px;
-  padding: 12px 20px;
-  font-size: 14px;
+  border-radius: 50px;
+  padding: 1.5rem 2.5rem;
+  font-size: 1.7rem;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s ease;
 }
