@@ -38,7 +38,6 @@ body {
   left: 0;
   right: 0;
   z-index: 100;
-  opacity: 0;
 }
 
 .nav__logo-box {
@@ -337,7 +336,7 @@ body {
 
 /* Section 3 */
 .section-3 {
-  height: 1400px;
+  height: 1380px;
   width: 100%;
   position: relative;
   display: flex;
@@ -410,9 +409,13 @@ body {
 .parallax-background {
   height: 60%;
   width: 100%;
-  border: 1px solid brown;
-  background-color: lightcoral;
   margin-top: 170px;
+  background-image: url(/img/parallax-background.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.15;
+  z-index: -1;
 }
 
 .sleet-context {
@@ -577,8 +580,193 @@ body {
 }
 
 /* Section 4 */
-.section-4 {
-  width: 100%;
+.footer {
   height: 400px;
   background-color: #1c1c1c;
+  position: relative;
+  padding: 100px 0 20px 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.logo-icon {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo-icon::before {
+  content: '';
+  width: 30px;
+  height: 25px;
+  background-color: #2a2a2a;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-size: 1.7rem;
+  color: #ccc;
+  font-weight: 600;
+}
+
+.logo-subtitle {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 60px;
+}
+
+.nav-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nav-column a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.nav-column a:hover {
+  color: white;
+}
+
+.book-now-btn {
+  background-color: #ff4444;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.book-now-btn:hover {
+  background-color: #e63939;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #999;
+}
+
+.copyright a {
+  color: #999;
+  text-decoration: underline;
+}
+
+.go-up-btn {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+.go-up-btn:hover {
+  color: white;
+}
+
+.go-up-btn::after {
+  content: '⌄';
+  transform: rotate(180deg);
+  font-size: 16px;
+}
+
+.chat-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.chat-button:hover {
+  background-color: #e63939;
+}
+
+.chat-button::before {
+  content: '💬';
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .chat-button {
+    bottom: 20px;
+    right: 20px;
+  }
 }
