@@ -3,362 +3,359 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alpine Veil - Winter Tours</title>
+
+    <!-- External Stylesheets -->
     <link
       rel="stylesheet"
-      type="text/css"
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
     />
     <link
       rel="stylesheet"
-      type="text/css"
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
     />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Alphine Veil</title>
   </head>
+
   <body>
-    <header class="header">
-      <nav class="nav">
-        <div class="nav__logo-box">
-          <img
-            src="/img/veil-logo-removebg-1.png"
-            alt="Mount Sleet Logo"
-            class="nav__logo-img"
-          />
-          <h1 class="nav__logo-title">Alphine Veil</h1>
-          <p class="nav__logo-subtitle">Winter Tours</p>
-        </div>
-        <ul class="nav__links--ul">
-          <li class="nav__items"><a href="#" class="nav__link">About</a></li>
-          <li class="nav__items"><a href="#" class="nav__link">Trails</a></li>
-          <li class="nav__items"><a href="#" class="nav__link">News</a></li>
-          <li class="nav__items">
-            <a href="#" class="nav__link">Contact</a>
-          </li>
-        </ul>
-        <div class="nav__profile">
-          <button class="login-btn-alt">
-            <div class="profile-icon-container">
-              <svg class="profile-icon-svg" viewBox="0 0 24 24">
-                <circle cx="12" cy="8" r="4" />
-                <path d="M20 19v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-              </svg>
-            </div>
-            <span class="nav-profile-text">Log In</span>
-          </button>
-        </div>
-      </nav>
-      <div class="header__text-box">
-        <div class="bg-video">
-          <video class="bg-video__content" autoplay muted loop>
-            <source src="/img/video-mountain.mp4" type="video/mp4" />
-            <source src="/img/video-mountain.webm" type="video/webm" />
-            Your browser is not supported!
-          </video>
-        </div>
-        <div class="header-center-text">
-          <h1 class="header__title">Welcome to Alphine Veil</h1>
-          <p class="header__sub-title">
-            I'm a paragraph. Click here to add your own text and edit me. It’s
-            easy. Just click “Edit Text” or double click me to add your own
-            content and make changes to the font.
-          </p>
-          <a href="#" class="btn-header__book">Book a Trail</a>
-        </div>
+    <!-- Navigation -->
+    <nav class="navigation">
+      <div class="navigation__logo">
+        <img
+          src="/img/veil-logo-removebg-1.png"
+          alt="Alpine Veil Logo"
+          class="navigation__logo-img"
+        />
+        <h1 class="navigation__logo-title">Alpine Veil</h1>
+        <p class="navigation__logo-subtitle">Winter Tours</p>
       </div>
-    </header>
-    <main class="main">
-      <section class="section-1" id="section--1">
-        <div class="trails-container-main">
-          <div class="trails__image-container">
-            <img src="/img/ski.png" alt="trails" class="image-ski" />
+
+      <ul class="navigation__menu">
+        <li class="navigation__item">
+          <a href="#about" class="navigation__link">About</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#trails" class="navigation__link">Trails</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#news" class="navigation__link">News</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#contact" class="navigation__link">Contact</a>
+        </li>
+      </ul>
+
+      <div class="navigation__profile">
+        <button class="login-button">
+          <div class="login-button__icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="8" r="4" />
+              <path d="M20 19v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            </svg>
           </div>
-          <div class="trails__container">
+          <span class="login-button__text">Log In</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero__video">
+        <video autoplay muted loop>
+          <source src="/img/video-mountain.mp4" type="video/mp4" />
+          <source src="/img/video-mountain.webm" type="video/webm" />
+          Your browser is not supported!
+        </video>
+      </div>
+
+      <div class="hero__content">
+        <h1 class="hero__title">Welcome to Alpine Veil</h1>
+        <p class="hero__subtitle">
+          Experience the magic of winter with our expertly guided tours through
+          pristine alpine landscapes. Create unforgettable memories in nature's
+          winter wonderland.
+        </p>
+        <a href="#trails" class="btn btn--primary">Book a Trail</a>
+      </div>
+    </section>
+
+    <main>
+      <!-- Trails Section -->
+      <section class="trails" id="trails">
+        <div class="trails__container">
+          <div class="trails__image">
+            <img src="/img/ski.png" alt="Winter sports equipment" />
+          </div>
+
+          <div class="trails__content">
             <h2 class="trails__title">Our Trails</h2>
-            <div class="trails__items">
-              <div class="item-content">
-                <h3 class="item-content-title">Half Day Snowshoe</h3>
-                <p class="item-content-activity">Offered Daily</p>
-                <p class="item-content-price">$80</p>
+
+            <div class="trails__grid">
+              <div class="trail-item__content">
+                <h3>Half Day Snowshoe</h3>
+                <p>Offered Daily</p>
+                <p>$80</p>
               </div>
-              <div class="item-btn">
-                <a href="#" class="item-btn-red">Book Now</a>
+              <div class="trail-item__button">
+                <a href="#" class="btn btn--red">Book Now</a>
               </div>
-              <div class="item-content">
-                <h3 class="item-content-title">Full Day Snowshoe</h3>
-                <p class="item-content-activity">Offered Daily</p>
-                <p class="item-content-price">$120</p>
+
+              <div class="trail-item__content">
+                <h3>Full Day Snowshoe</h3>
+                <p>Offered Daily</p>
+                <p>$120</p>
               </div>
-              <div class="item-btn">
-                <a href="#" class="item-btn-red">Book Now</a>
+              <div class="trail-item__button">
+                <a href="#" class="btn btn--red">Book Now</a>
               </div>
-              <div class="item-content">
-                <h3 class="item-content-title">Winter Walk</h3>
-                <p class="item-content-activity">Mon to Fri</p>
-                <p class="item-content-price">$80</p>
+
+              <div class="trail-item__content">
+                <h3>Winter Walk</h3>
+                <p>Mon to Fri</p>
+                <p>$80</p>
               </div>
-              <div class="item-btn">
-                <a href="#" class="item-btn-red">Book Now</a>
+              <div class="trail-item__button">
+                <a href="#" class="btn btn--red">Book Now</a>
               </div>
-              <div class="item-content">
-                <h3 class="item-content-title">Ski Tour</h3>
-                <p class="item-content-activity">Set</p>
-                <p class="item-content-price">$120</p>
+
+              <div class="trail-item__content">
+                <h3>Ski Tour</h3>
+                <p>Weekends</p>
+                <p>$120</p>
               </div>
-              <div class="item-btn">
-                <a href="#" class="item-btn-red">Book Now</a>
+              <div class="trail-item__button">
+                <a href="#" class="btn btn--red">Book Now</a>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="section-2" id="section--2">
-        <div class="winter-container">
-          <div class="winter-container-header">
-            <h2 class="winter-title">Make Winter Last Forever</h2>
-            <p class="winter-sub-title">
-              I'm a paragraph. Click here to add your own text and edit me. Its
-              easy. Just click “Edit Text” or double click me to add your own
-              content and make changes to the font.
-            </p>
-          </div>
-          <div class="winter__icons-container">
-            <div class="icons-container">
-              <img
-                src="/img/adventure.png"
-                alt="adventure"
-                class="winter-icon"
-              />
-              <p class="icon-title">Adventure</p>
+
+      <!-- Features Section -->
+      <section class="features">
+        <div class="features__content">
+          <h2 class="features__title">Make Winter Last Forever</h2>
+          <p class="features__subtitle">
+            Discover the perfect blend of adventure, safety, and unforgettable
+            experiences in the heart of winter's most beautiful landscapes.
+          </p>
+
+          <div class="features__grid">
+            <div class="feature-item">
+              <img src="/img/adventure.png" alt="Adventure icon" />
+              <h3 class="feature-item__title">Adventure</h3>
             </div>
-            <div class="icons-container">
-              <img src="/img/experience.png" alt="Safety" class="winter-icon" />
-              <p class="icon-title">Safety</p>
+            <div class="feature-item">
+              <img src="/img/experience.png" alt="Safety icon" />
+              <h3 class="feature-item__title">Safety</h3>
             </div>
-            <div class="icons-container">
-              <img
-                src="/img/meamories.png"
-                alt="Memories"
-                class="winter-icon"
-              />
-              <p class="icon-title">Memories</p>
+            <div class="feature-item">
+              <img src="/img/meamories.png" alt="Memories icon" />
+              <h3 class="feature-item__title">Memories</h3>
             </div>
-            <div class="icons-container">
-              <img
-                src="/img/roadmap.png"
-                alt="Experience"
-                class="winter-icon"
-              />
-              <p class="icon-title">Experience</p>
+            <div class="feature-item">
+              <img src="/img/roadmap.png" alt="Experience icon" />
+              <h3 class="feature-item__title">Experience</h3>
             </div>
           </div>
-          <a href="#" class="btn-white">Learn More</a>
+
+          <a href="#about" class="btn btn--secondary">Learn More</a>
         </div>
       </section>
-      <section class="section-3" id="section--3">
-        <div class="peak container-sizing">
-          <div class="peak-context">
-            <div class="peak-text-container">
-              <h2 class="peak-title">Peak Experiences</h2>
-              <p class="peak-subtitle">
-                Veritatis ducimus repudiandae quisquam molestiae at iste,
-                pariatur officia earum ea id necessitatibus repellat! Nostrum
-                nobis aliquid mollitia praesentium quaerat quos est.
+
+      <!-- Content Sections -->
+      <!-- Testimonial Section -->
+      <section class="section-correct">
+        <!-- Parallax Section -->
+        <section class="parallax-section">
+          <div class="testimonial">
+            <div class="testimonial__content">
+              <div class="testimonial__text">
+                <h2 class="testimonial__title">Peak Experiences</h2>
+                <p class="testimonial__quote">
+                  "The winter tours offered an incredible blend of adventure and
+                  tranquility. Professional guides, breathtaking scenery, and
+                  memories that will last a lifetime."
+                </p>
+                <p class="testimonial__author">- Jason</p>
+              </div>
+            </div>
+            <div class="testimonial__image">
+              <img src="/img/hikers.png" alt="Hikers in winter landscape" />
+            </div>
+          </div>
+          <!-- News Section -->
+          <div class="news" id="news">
+            <div class="news__header">
+              <h3 class="news__title">Latest News</h3>
+              <p class="news__subtitle">
+                Stay updated with the latest winter adventure tips, weather
+                reports, and exciting stories from the trail.
               </p>
-              <p class="person-name">Jason</p>
             </div>
-          </div>
-          <div class="peak-img">
-            <img src="/img/hikers.png" class="hikers-img" alt="hikers" />
-          </div>
-        </div>
-        <div class="parallax-background"></div>
-        <div class="sleet container-sizing">
-          <div class="sleet-context">
-            <h3 class="sleet-title">Sleet News</h3>
-            <p class="sleet-subtitle">
-              Nulla tenetur, quis, at excepturi laboriosam cum commodi tempora
-              repudiandae officiis corrupti eum accusantium ea quas accusamus
-              neque nobis.
-            </p>
-          </div>
-          <div class="sleet-card">
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="/img/winter-hike.jpg"
-                  alt="hikers"
-                  class="card-images"
-                />
-              </div>
-              <div class="card-overlay">
-                <div class="title-container">
-                  <h3 class="card-title">
+
+            <div class="news__grid">
+              <article class="news-card">
+                <div class="news-card__image">
+                  <img src="/img/winter-hike.jpg" alt="Winter hiking" />
+                </div>
+                <div class="news-card__content">
+                  <h3 class="news-card__title">
                     How to Experience Winter Hikes Virtually
                   </h3>
-                </div>
-                <hr />
-                <div class="card-stats">
-                  <div class="stat-item">
-                    <svg viewBox="0 0 24 24">
-                      <path
-                        d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
-                      />
-                    </svg>
-                    <span class="view-count">1</span>
-                  </div>
-                  <div class="stat-item">
-                    <svg viewBox="0 0 24 24">
-                      <path
-                        d="M21.99 4c0-1.1-.89-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM18 14H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"
-                      />
-                    </svg>
-                    <span class="comment-count">0</span>
-                  </div>
-                  <div class="stat-item heart-icon">
-                    <span>2</span>
-                    <svg viewBox="0 0 24 24">
-                      <path
-                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- card 2 -->
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="/img/snow-storm.jpg"
-                  alt="house"
-                  class="card-images"
-                />
-              </div>
-              <div class="card-overlay">
-                <div class="title-container">
-                  <h3 class="card-title">Snow and Weather Report: December</h3>
-                </div>
-                <hr />
-                <div class="card-stats">
-                  <div class="stat-item">
-                    <svg viewBox="0 0 24 24">
-                      <path
-                        d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
-                      />
-                    </svg>
-                    <span class="view-count">0</span>
-                  </div>
-                  <div class="stat-item">
-                    <svg viewBox="0 0 24 24">
-                      <path
-                        d="M21.99 4c0-1.1-.89-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM18 14H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"
-                      />
-                    </svg>
-                    <span class="comment-count">0</span>
-                  </div>
-                  <div class="stat-item heart-icon">
-                    <span>2</span>
-                    <svg viewBox="0 0 24 24">
-                      <path
-                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                      />
-                    </svg>
+                  <div class="news-card__stats">
+                    <div class="news-card__stat">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+                        />
+                      </svg>
+                      <span>1</span>
+                    </div>
+                    <div class="news-card__stat">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M21.99 4c0-1.1-.89-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM18 14H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"
+                        />
+                      </svg>
+                      <span>0</span>
+                    </div>
+                    <div class="news-card__stat news-card__stat--likes">
+                      <span>2</span>
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                        />
+                      </svg>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <!-- card 3 -->
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="/img/righway-forest.jpg"
-                  alt="forest"
-                  class="card-images"
-                />
-              </div>
-              <div class="card-overlay">
-                <div class="title-container">
-                  <h3 class="card-title">Top Winter Navigation Tips</h3>
+              </article>
+
+              <article class="news-card">
+                <div class="news-card__image">
+                  <img src="/img/snow-storm.jpg" alt="Snow storm" />
                 </div>
-                <hr />
-                <div class="card-stats">
-                  <div class="stat-item">
-                    <svg viewBox="0 0 24 24">
-                      <path
-                        d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
-                      />
-                    </svg>
-                    <span class="view-count">0</span>
-                  </div>
-                  <div class="stat-item">
-                    <svg viewBox="0 0 24 24">
-                      <path
-                        d="M21.99 4c0-1.1-.89-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM18 14H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"
-                      />
-                    </svg>
-                    <span class="comment-count">0</span>
-                  </div>
-                  <div class="stat-item heart-icon">
-                    <span>0</span>
-                    <svg viewBox="0 0 24 24">
-                      <path
-                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                      />
-                    </svg>
+                <div class="news-card__content">
+                  <h3 class="news-card__title">
+                    Snow and Weather Report: December
+                  </h3>
+                  <div class="news-card__stats">
+                    <div class="news-card__stat">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+                        />
+                      </svg>
+                      <span>0</span>
+                    </div>
+                    <div class="news-card__stat">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M21.99 4c0-1.1-.89-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM18 14H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"
+                        />
+                      </svg>
+                      <span>0</span>
+                    </div>
+                    <div class="news-card__stat news-card__stat--likes">
+                      <span>2</span>
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                        />
+                      </svg>
+                    </div>
                   </div>
                 </div>
+              </article>
+
+              <article class="news-card">
+                <div class="news-card__image">
+                  <img src="/img/righway-forest.jpg" alt="Forest path" />
+                </div>
+                <div class="news-card__content">
+                  <h3 class="news-card__title">Top Winter Navigation Tips</h3>
+                  <div class="news-card__stats">
+                    <div class="news-card__stat">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+                        />
+                      </svg>
+                      <span>0</span>
+                    </div>
+                    <div class="news-card__stat">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M21.99 4c0-1.1-.89-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM18 14H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"
+                        />
+                      </svg>
+                      <span>0</span>
+                    </div>
+                    <div class="news-card__stat news-card__stat--likes">
+                      <span>0</span>
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <div class="text-center">
+                <a href="#" class="btn btn--secondary">Read More</a>
               </div>
             </div>
           </div>
-          <div class="sleet-container--btn">
-            <a href="" class="btn-white">Read More</a>
-          </div>
-        </div>
+        </section>
       </section>
     </main>
-    <footer class="footer" id="footer">
-      <div class="footer-container">
-        <div class="footer-logo">
-          <div class="logo-icon"></div>
-          <div class="logo-text">
-            <div class="logo-title">Alphine Veil</div>
-            <div class="logo-subtitle">Winter Tours</div>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+      <div class="footer__container">
+        <div class="footer__main">
+          <div class="footer__logo">
+            <div class="footer__logo-icon"></div>
+            <div class="footer__logo-title">Alpine Veil</div>
+            <div class="footer__logo-subtitle">Winter Tours</div>
+          </div>
+
+          <div class="footer__nav-container">
+            <nav class="footer__nav">
+              <div class="footer__nav-column">
+                <a href="#about" class="footer__nav-link">About</a>
+                <a href="#trails" class="footer__nav-link">Trails</a>
+                <a href="#news" class="footer__nav-link">News</a>
+                <a href="#contact" class="footer__nav-link">Contact</a>
+              </div>
+              <div class="footer__nav-column">
+                <a href="#" class="footer__nav-link">Facebook</a>
+                <a href="#" class="footer__nav-link">Instagram</a>
+              </div>
+            </nav>
+
+            <a href="#trails" class="btn btn--red">Book Now</a>
           </div>
         </div>
 
-        <div class="footer-nav-container">
-          <nav class="footer-nav">
-            <div class="nav-column">
-              <a href="#about">About</a>
-              <a href="#trails">Trails</a>
-              <a href="#news">News</a>
-              <a href="#contact">Contact</a>
-            </div>
-            <div class="nav-column">
-              <a href="#facebook">Facebook</a>
-              <a href="#instagram">Instagram</a>
-            </div>
-          </nav>
-
-          <a href="#book" class="book-now-btn">Book Now</a>
-        </div>
-      </div>
-
-      <div class="footer-container">
-        <div class="footer-bottom">
-          <div class="copyright">
-            © 2025 by Alphine Veil<br />
+        <div class="footer__bottom">
+          <div class="footer__copyright">
+            © 2025 by Alpine Veil<br />
             Powered and secured by <a href="#">Ivan</a>
           </div>
           <button
-            class="go-up-btn"
+            class="footer__go-up"
             onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
           >
             Go Up
@@ -366,11 +363,75 @@
         </div>
       </div>
     </footer>
+
+    <!-- Chat Button -->
     <button
       class="chat-button"
       onclick="alert('Chat feature would open here!')"
     >
       Let's Chat!
     </button>
+
+    <script>
+      // Simple JavaScript for enhanced user experience
+      document.addEventListener('DOMContentLoaded', function () {
+        // Smooth scrolling for navigation links
+        const navLinks = document.querySelectorAll('a[href^="#"]');
+
+        navLinks.forEach(link => {
+          link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+
+            if (targetSection) {
+              const offsetTop =
+                targetSection.getBoundingClientRect().top +
+                window.pageYOffset -
+                90;
+
+              window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth',
+              });
+            }
+          });
+        });
+
+        // Heart animation for news cards
+        const heartButtons = document.querySelectorAll(
+          '.news-card__stat--likes'
+        );
+
+        heartButtons.forEach(button => {
+          button.addEventListener('click', function () {
+            this.classList.toggle('liked');
+            const count = this.querySelector('span');
+            const currentCount = parseInt(count.textContent);
+
+            if (this.classList.contains('liked')) {
+              count.textContent = currentCount + 1;
+            } else {
+              count.textContent = Math.max(0, currentCount - 1);
+            }
+          });
+        });
+
+        // Add scroll effect to navigation
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', function () {
+          const navigation = document.querySelector('.navigation');
+
+          if (window.scrollY > lastScrollY && window.scrollY > 100) {
+            navigation.style.transform = 'translateY(-100%)';
+          } else {
+            navigation.style.transform = 'translateY(0)';
+          }
+
+          lastScrollY = window.scrollY;
+        });
+      });
+    </script>
   </body>
 </html>
