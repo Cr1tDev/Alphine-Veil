@@ -1,0 +1,841 @@
+/* ===== ENHANCED RESPONSIVE DESIGN ===== */
+
+/* Large Desktop (1200px and up) - Default styles already cover this */
+@media (min-width: 1200px) {
+  .container,
+  .trails__container,
+  .testimonial,
+  .news {
+    max-width: var(--container-max-width);
+  }
+}
+
+/* Desktop/Laptop (992px to 1199px) */
+@media (max-width: 1199px) {
+  :root {
+    --container-width: 90%;
+  }
+
+  .navigation__logo {
+    left: 4rem;
+    width: 130px;
+    height: 180px;
+  }
+
+  .navigation__logo-img {
+    width: 100px;
+    margin-top: 45px;
+  }
+
+  .navigation__item {
+    margin-left: 3rem;
+  }
+
+  .navigation__profile {
+    margin: 0 3rem;
+  }
+
+  .hero__title {
+    font-size: 5.5rem;
+  }
+
+  .trails__container {
+    height: 750px;
+  }
+
+  .features__title {
+    font-size: 4.5rem;
+  }
+
+  .testimonial__title {
+    font-size: 4.5rem;
+  }
+
+  .news__title {
+    font-size: 4.5rem;
+  }
+}
+
+/* Tablet Landscape (768px to 991px) */
+@media (max-width: 991px) {
+  html {
+    font-size: 58%; /* 9.28px */
+  }
+
+  :root {
+    --nav-height: 8rem;
+    --container-width: 95%;
+  }
+
+  .navigation {
+    height: var(--nav-height);
+    justify-content: center;
+    padding: 0 2rem;
+  }
+
+  .navigation__logo {
+    position: static;
+    width: 120px;
+    height: 160px;
+    margin-right: auto;
+  }
+
+  .navigation__logo-img {
+    width: 90px;
+    margin-top: 35px;
+  }
+
+  .navigation__menu {
+    margin: 0 2rem;
+  }
+
+  .navigation__item {
+    margin-left: 2rem;
+  }
+
+  .navigation__link {
+    font-size: 1.6rem;
+  }
+
+  .navigation__profile {
+    margin: 0;
+  }
+
+  .hero {
+    height: 80vh;
+  }
+
+  .hero__title {
+    font-size: 4.5rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.6rem;
+    max-width: 90%;
+  }
+
+  .trails__container {
+    height: 650px;
+    flex-direction: column;
+    padding: 4rem 2rem;
+  }
+
+  .trails__image {
+    width: 100%;
+    height: 40%;
+    order: 2;
+  }
+
+  .trails__content {
+    width: 100%;
+    order: 1;
+    margin-bottom: 3rem;
+  }
+
+  .trails__title {
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .trails__grid {
+    gap: 3rem 2rem;
+  }
+
+  .features {
+    height: 700px;
+  }
+
+  .features__title {
+    font-size: 4rem;
+  }
+
+  .features__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .testimonial {
+    width: 95%;
+    height: 450px;
+    left: 2.5%;
+  }
+
+  .testimonial__title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .testimonial__quote {
+    font-size: 1.6rem;
+  }
+
+  .news {
+    width: 95%;
+    transform: translate(2.5%, 26%);
+  }
+
+  .news__title {
+    font-size: 4rem;
+  }
+
+  .news__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 2rem;
+  }
+
+  .news-card {
+    height: 340px;
+  }
+
+  .footer__main {
+    gap: 3rem;
+  }
+
+  .footer__nav-container {
+    gap: 4rem;
+  }
+}
+
+/* Tablet Portrait (768px and below) */
+@media (max-width: 768px) {
+  html {
+    font-size: 56.25%; /* 9px */
+  }
+
+  :root {
+    --nav-height: 7rem;
+  }
+
+  .navigation {
+    height: var(--nav-height);
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+  }
+
+  .navigation__logo {
+    width: 100px;
+    height: 140px;
+  }
+
+  .navigation__logo-img {
+    width: 80px;
+    margin-top: 25px;
+  }
+
+  .navigation__logo-title {
+    font-size: 1.2rem;
+  }
+
+  .navigation__logo-subtitle {
+    font-size: 1rem;
+  }
+
+  .navigation__menu {
+    margin: 0 1rem;
+  }
+
+  .navigation__item {
+    margin-left: 1.5rem;
+  }
+
+  .navigation__link {
+    font-size: 1.5rem;
+  }
+
+  .hero {
+    height: 70vh;
+  }
+
+  .hero__title {
+    font-size: 4rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.5rem;
+    max-width: 95%;
+    margin-bottom: 3rem;
+  }
+
+  .trails__container {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+
+  .trails__title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .trails__grid {
+    gap: 2.5rem 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .trail-item__content h3 {
+    font-size: 1.8rem;
+  }
+
+  .features {
+    height: 600px;
+    padding: 0 2rem;
+  }
+
+  .features__title {
+    font-size: 3.5rem;
+  }
+
+  .features__subtitle {
+    font-size: 1.6rem;
+    max-width: 95%;
+    margin-bottom: 4rem;
+  }
+
+  .features__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .feature-item img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature-item__title {
+    font-size: 1.8rem;
+  }
+
+  .content-section {
+    height: auto;
+    min-height: 1000px;
+  }
+
+  .parallax-section {
+    height: 60vh;
+    min-height: 400px;
+    position: relative;
+  }
+
+  .testimonial {
+    width: 90%;
+    height: auto;
+    min-height: 350px;
+    flex-direction: row;
+    left: 5%;
+    top: 10%;
+    position: absolute;
+  }
+
+  .testimonial__content {
+    flex: 1.5;
+    padding: 3rem 2rem;
+  }
+
+  .testimonial__image {
+    flex: 1;
+  }
+
+  .testimonial__title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonial__quote {
+    font-size: 1.5rem;
+  }
+
+  .testimonial__author {
+    font-size: 1.5rem;
+  }
+
+  .news {
+    width: 90%;
+    position: absolute;
+    bottom: -20%;
+    left: 5%;
+    transform: none;
+  }
+
+  .news__header {
+    margin-bottom: 5rem;
+  }
+
+  .news__title {
+    font-size: 3.5rem;
+  }
+
+  .news__subtitle {
+    font-size: 1.6rem;
+  }
+
+  .news__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .news-card {
+    height: 320px;
+  }
+
+  .news-card__title {
+    font-size: 1.6rem;
+  }
+
+  .footer__main {
+    flex-direction: row;
+    text-align: start;
+    gap: 2rem;
+  }
+
+  .footer__nav {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .footer__nav-container {
+    gap: 2rem;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .chat-button {
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1.2rem 2rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile Large (481px to 640px) */
+@media (max-width: 640px) {
+  .navigation {
+    padding: 0.5rem 1rem;
+  }
+
+  .navigation__menu {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .navigation__item {
+    margin: 0 1rem;
+  }
+
+  .hero__content {
+    bottom: 3rem;
+    padding: 0 2rem;
+  }
+
+  .hero__title {
+    font-size: 3.5rem;
+  }
+
+  .trails__container {
+    padding: 2rem 1rem;
+  }
+
+  .features {
+    height: 600px;
+  }
+
+  .features__content {
+    bottom: 30px;
+  }
+
+  .features__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .testimonial {
+    height: 350px;
+    top: -10%;
+  }
+
+  .testimonial__text {
+    max-width: 85%;
+  }
+
+  .news {
+    transform: translate(2.5%, 35%);
+  }
+
+  .parallax-section {
+    background-attachment: scroll;
+  }
+}
+
+/* Mobile Medium (481px and below) */
+@media (max-width: 480px) {
+  html {
+    font-size: 54%; /* 8.64px */
+  }
+
+  :root {
+    --nav-height: auto;
+  }
+
+  .navigation {
+    height: auto;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navigation__logo {
+    margin-bottom: 1rem;
+  }
+
+  .navigation__menu {
+    width: 100%;
+    justify-content: space-around;
+    margin: 0;
+  }
+
+  .navigation__item {
+    margin: 0;
+  }
+
+  .navigation__profile {
+    margin-top: 1rem;
+  }
+
+  .hero {
+    margin-top: 12rem;
+    height: 60vh;
+  }
+
+  .hero__title {
+    font-size: 3rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .trails__container {
+    padding: 2rem 0.5rem;
+  }
+
+  .trails__title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .trails__grid {
+    gap: 2rem 1rem;
+    font-size: 1.3rem;
+  }
+
+  .trail-item__content h3 {
+    font-size: 1.6rem;
+  }
+
+  .trail-item__button .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.3rem;
+  }
+
+  .features {
+    height: 700px;
+    padding: 0 1rem;
+  }
+
+  .features__title {
+    font-size: 3rem;
+  }
+
+  .features__subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .features__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .feature-item img {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 1rem;
+  }
+
+  .feature-item__title {
+    font-size: 1.6rem;
+  }
+
+  .content-section {
+    height: auto;
+    min-height: 800px;
+    position: relative;
+  }
+
+  .parallax-section {
+    height: 40vh;
+    min-height: 300px;
+  }
+
+  .testimonial {
+    width: 95%;
+    height: auto;
+    min-height: 280px;
+    flex-direction: column;
+    left: 2.5%;
+    top: 2%;
+    position: absolute;
+  }
+
+  .testimonial__content {
+    flex: none;
+    padding: 2rem 1rem;
+    min-height: 180px;
+  }
+
+  .testimonial__image {
+    flex: none;
+    height: 120px;
+  }
+
+  .testimonial__text {
+    max-width: 95%;
+  }
+
+  .testimonial__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial__quote {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial__author {
+    font-size: 1.4rem;
+  }
+
+  .parallax-section {
+    height: 25vh;
+    min-height: 180px;
+    background-attachment: scroll;
+  }
+
+  .news {
+    width: 95%;
+    position: absolute;
+    bottom: -40%;
+    left: 2.5%;
+    transform: none;
+  }
+
+  .news__header {
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+  }
+
+  .news__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .news__subtitle {
+    font-size: 1.5rem;
+  }
+
+  .news__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .news-card {
+    height: 300px;
+  }
+
+  .news-card__content {
+    padding: 1.5rem;
+  }
+
+  .news-card__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .news-card__stats {
+    font-size: 1.3rem;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+
+  .footer {
+    padding: 6rem 0 2rem;
+  }
+
+  .footer__container {
+    padding: 0 1rem;
+  }
+
+  .footer__main {
+    margin-bottom: 3rem;
+  }
+
+  .footer__nav {
+    gap: 2rem;
+  }
+
+  .chat-button {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.4rem;
+  }
+}
+
+/* Mobile Small (360px and below) */
+@media (max-width: 360px) {
+  html {
+    font-size: 52%; /* 8.32px */
+  }
+
+  .hero {
+    margin-top: 14rem;
+  }
+
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.3rem;
+  }
+
+  .trails__title {
+    font-size: 2.2rem;
+  }
+
+  .features__title {
+    font-size: 2.5rem;
+  }
+
+  .content-section {
+    height: auto;
+    min-height: 700px;
+    position: relative;
+  }
+
+  .parallax-section {
+    height: 30vh;
+    min-height: 200px;
+    background-attachment: scroll;
+  }
+
+  .testimonial {
+    width: 95%;
+    height: auto;
+    min-height: 250px;
+    flex-direction: column;
+    left: 2.5%;
+    top: 1%;
+    position: absolute;
+  }
+
+  .testimonial__content {
+    flex: none;
+    padding: 1.5rem 1rem;
+    min-height: 150px;
+  }
+
+  .testimonial__image {
+    flex: none;
+    height: 100px;
+  }
+
+  .testimonial__text {
+    max-width: 95%;
+  }
+
+  .testimonial__title {
+    font-size: 2.2rem;
+  }
+
+  .news {
+    width: 95%;
+    position: absolute;
+    bottom: -50%;
+    left: 2.5%;
+    transform: none;
+  }
+
+  .news__title {
+    font-size: 2.2rem;
+  }
+
+  .news-card {
+    height: 280px;
+  }
+
+  .chat-button {
+    padding: 0.8rem 1.2rem;
+    font-size: 1.3rem;
+  }
+}
+
+/* Ultra-wide screens (1400px and up) */
+@media (min-width: 1400px) {
+  .navigation__logo {
+    left: 10rem;
+  }
+
+  .navigation__item {
+    margin-left: 6rem;
+  }
+
+  .navigation__profile {
+    margin: 0 6rem;
+  }
+}
+
+/* Landscape orientation adjustments for mobile devices */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    height: 100vh;
+    margin-top: 8rem;
+  }
+
+  .hero__title {
+    font-size: 3rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .features {
+    height: 700px;
+  }
+
+  .testimonial {
+    height: 250px;
+  }
+
+  .content-section {
+    height: 700px;
+  }
+}

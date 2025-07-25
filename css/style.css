@@ -15,7 +15,7 @@
   /* Spacing */
   --nav-height: 9rem;
   --container-width: 80%;
-  --container-max-width: 1250px;
+  --container-max-width: 300rem;
 
   /* Transitions */
   --transition-fast: 0.3s ease;
@@ -602,7 +602,7 @@ body {
 }
 
 .footer__container {
-  max-width: var(--container-max-width);
+  max-width: 80%;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -748,86 +748,4 @@ body {
 .chat-button::before {
   content: '💬';
   font-size: 1.6rem;
-}
-
-/* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 768px) {
-  html {
-    font-size: 56.25%; /* 9px */
-  }
-
-  .hero__title {
-    font-size: 4.5rem;
-  }
-
-  .features__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-  }
-
-  .news__grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .footer__main {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer__nav {
-    flex-direction: column;
-    gap: 3rem;
-  }
-
-  .footer__bottom {
-    flex-direction: column;
-    gap: 2rem;
-    text-align: center;
-  }
-
-  .chat-button {
-    bottom: 2rem;
-    right: 2rem;
-    padding: 1.2rem 2rem;
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero__title {
-    font-size: 3.5rem;
-  }
-
-  .features__grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .trails__container {
-    flex-direction: column;
-    height: auto;
-    padding: 4rem 2rem;
-  }
-
-  .trails__image,
-  .trails__content {
-    width: 100%;
-  }
-
-  .testimonial {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .testimonial__content,
-  .testimonial__image {
-    flex: none;
-  }
-
-  .parallax-section {
-    background-attachment: scroll;
-    height: 30vh;
-    min-height: 200px;
-  }
 }
