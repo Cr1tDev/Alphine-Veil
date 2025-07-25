@@ -186,7 +186,7 @@ body {
 /* Header */
 .header {
   width: 100%;
-  height: 600px;
+  height: 500px;
   background-color: var(--primary-color);
   align-content: center;
   margin-top: 9rem;
@@ -219,8 +219,7 @@ body {
 
 .main {
   width: 100%;
-  height: 3000px;
-  border: 2px solid red;
+  height: 3300px;
 }
 
 .about-box {
@@ -277,6 +276,28 @@ body {
   background-attachment: initial;
   background-size: cover;
   background-position: center;
+}
+
+.gallery-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 380px);
+  gap: 20px;
+  overflow: hidden;
+  width: 80%;
+}
+
+.box__img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.img--context {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* ===== FOOTER ===== */
@@ -403,5 +424,34 @@ body {
 .footer__go-up::after {
   content: '⌄';
   transform: rotate(180deg);
+  font-size: 1.6rem;
+}
+
+/* ===== CHAT BUTTON ===== */
+.chat-button {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  border: none;
+  border-radius: 50px;
+  padding: 1.5rem 2.5rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color var(--transition-fast);
+  z-index: 1000;
+}
+
+.chat-button:hover {
+  background-color: var(--color-red-hover);
+}
+
+.chat-button::before {
+  content: '💬';
   font-size: 1.6rem;
 }
