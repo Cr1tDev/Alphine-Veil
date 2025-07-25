@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/news.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>News</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navigation">
+      <div class="navigation__logo">
+        <a href="../index.html"
+          ><img
+            src="/img/veil-logo-removebg-1.png"
+            alt="Alpine Veil Logo"
+            class="navigation__logo-img"
+        /></a>
+        <h1 class="navigation__logo-title">Alpine Veil</h1>
+        <p class="navigation__logo-subtitle">Winter Tours</p>
+      </div>
+
+      <ul class="navigation__menu">
+        <li class="navigation__item">
+          <a href="/pages/about.html" class="navigation__link">About</a>
+        </li>
+        <li class="navigation__item">
+          <a href="/pages/trails.html" class="navigation__link">Trails</a>
+        </li>
+        <li class="navigation__item">
+          <a href="/pages/news.html" class="navigation__link">News</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#contact" class="navigation__link">Contact</a>
+        </li>
+      </ul>
+
+      <div class="navigation__profile">
+        <button class="login-button">
+          <div class="login-button__icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="8" r="4" />
+              <path d="M20 19v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            </svg>
+          </div>
+          <span class="login-button__text">Log In</span>
+        </button>
+      </div>
+    </nav>
+    <header class="header">
+      <div class="container about">
+        <h1 class="about-title">Alphine News</h1>
+        <p class="about-subtitle">
+          I'm a paragraph. Click here to add your own text and edit me. It’s
+          easy. Just click “Edit Text” or double click me to add your own
+          content and make changes to the font.
+        </p>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container news">
+        <article class="card card1">
+          <div class="card-image"></div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span>Jan 25, 2023</span>
+              <span>•</span>
+              <span>1 min read</span>
+              <button class="more-btn">⋯</button>
+            </div>
+            <h2 class="card-title">How to Experience Winter Hikes Virtually</h2>
+            <div class="card-stats">
+              <div class="stats-left">
+                <span class="stat-item">
+                  <svg
+                    class="stat-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  0
+                </span>
+                <span class="stat-item">
+                  <svg
+                    class="stat-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                    ></path>
+                  </svg>
+                  0
+                </span>
+              </div>
+              <button class="like-btn" onclick="toggleLike(this)">
+                <span class="like-count">2</span>
+                <svg class="heart-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card2">
+          <div class="card-image"></div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span>Jan 25, 2023</span>
+              <span>•</span>
+              <span>2 min read</span>
+              <button class="more-btn">⋯</button>
+            </div>
+            <h2 class="card-title">Snow and Weather Report: December</h2>
+            <div class="card-stats">
+              <div class="stats-left">
+                <span class="stat-item">
+                  <svg
+                    class="stat-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  0
+                </span>
+                <span class="stat-item">
+                  <svg
+                    class="stat-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                    ></path>
+                  </svg>
+                  0
+                </span>
+              </div>
+              <button class="like-btn" onclick="toggleLike(this)">
+                <span class="like-count">0</span>
+                <svg class="heart-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card3">
+          <div class="card-image"></div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span>Jan 25, 2023</span>
+              <span>•</span>
+              <span>1 min read</span>
+              <button class="more-btn">⋯</button>
+            </div>
+            <h2 class="card-title">Top Winter Navigation Tips</h2>
+            <div class="card-stats">
+              <div class="stats-left">
+                <span class="stat-item">
+                  <svg
+                    class="stat-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  0
+                </span>
+                <span class="stat-item">
+                  <svg
+                    class="stat-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                    ></path>
+                  </svg>
+                  0
+                </span>
+              </div>
+              <button class="like-btn" onclick="toggleLike(this)">
+                <span class="like-count">0</span>
+                <svg class="heart-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card4">
+          <div class="card-image"></div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span>Jan 25, 2023</span>
+              <span>•</span>
+              <span>2 min read</span>
+              <button class="more-btn">⋯</button>
+            </div>
+            <h2 class="card-title">Our Favorite Winter Walking Gear</h2>
+            <div class="card-stats">
+              <div class="stats-left">
+                <span class="stat-item">
+                  <svg
+                    class="stat-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  0
+                </span>
+                <span class="stat-item">
+                  <svg
+                    class="stat-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                    ></path>
+                  </svg>
+                  0
+                </span>
+              </div>
+              <button class="like-btn" onclick="toggleLike(this)">
+                <span class="like-count">0</span>
+                <svg class="heart-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card5">
+          <div class="card-image"></div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span>Jan 25, 2023</span>
+              <span>•</span>
+              <span>2 min read</span>
+              <button class="more-btn">⋯</button>
+            </div>
+            <h2 class="card-title">Terrain Status</h2>
+            <div class="card-stats">
+              <div class="stats-left">
+                <span class="stat-item">
+                  <svg
+                    class="stat-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  0
+                </span>
+                <span class="stat-item">
+                  <svg
+                    class="stat-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                    ></path>
+                  </svg>
+                  0
+                </span>
+              </div>
+              <button class="like-btn" onclick="toggleLike(this)">
+                <span class="like-count liked">1</span>
+                <svg class="heart-icon liked" viewBox="0 0 24 24">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card6">
+          <div class="card-image"></div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span>Jan 25, 2023</span>
+              <span>•</span>
+              <span>1 min read</span>
+              <button class="more-btn">⋯</button>
+            </div>
+            <h2 class="card-title">Must-Do Winter Hikes</h2>
+            <div class="card-stats">
+              <div class="stats-left">
+                <span class="stat-item">
+                  <svg
+                    class="stat-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  0
+                </span>
+                <span class="stat-item">
+                  <svg
+                    class="stat-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                    ></path>
+                  </svg>
+                  0
+                </span>
+              </div>
+              <button class="like-btn" onclick="toggleLike(this)">
+                <span class="like-count">0</span>
+                <svg class="heart-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="card card6">
+          <div class="card-image"></div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span>Jan 25, 2023</span>
+              <span>•</span>
+              <span>1 min read</span>
+              <button class="more-btn">⋯</button>
+            </div>
+            <h2 class="card-title">Must-Do Winter Hikes</h2>
+            <div class="card-stats">
+              <div class="stats-left">
+                <span class="stat-item">
+                  <svg
+                    class="stat-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  0
+                </span>
+                <span class="stat-item">
+                  <svg
+                    class="stat-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                    ></path>
+                  </svg>
+                  0
+                </span>
+              </div>
+              <button class="like-btn" onclick="toggleLike(this)">
+                <span class="like-count">0</span>
+                <svg class="heart-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="card card6">
+          <div class="card-image"></div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span>Jan 25, 2023</span>
+              <span>•</span>
+              <span>1 min read</span>
+              <button class="more-btn">⋯</button>
+            </div>
+            <h2 class="card-title">Must-Do Winter Hikes</h2>
+            <div class="card-stats">
+              <div class="stats-left">
+                <span class="stat-item">
+                  <svg
+                    class="stat-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  0
+                </span>
+                <span class="stat-item">
+                  <svg
+                    class="stat-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                    ></path>
+                  </svg>
+                  0
+                </span>
+              </div>
+              <button class="like-btn" onclick="toggleLike(this)">
+                <span class="like-count">0</span>
+                <svg class="heart-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer class="footer" id="contact">
+      <div class="footer__container">
+        <div class="footer__main">
+          <div class="footer__logo">
+            <div class="footer__logo-icon"></div>
+            <div class="footer__logo-title">Alpine Veil</div>
+            <div class="footer__logo-subtitle">Winter Tours</div>
+          </div>
+
+          <div class="footer__nav-container">
+            <nav class="footer__nav">
+              <div class="footer__nav-column">
+                <a href="#about" class="footer__nav-link">About</a>
+                <a href="#trails" class="footer__nav-link">Trails</a>
+                <a href="#news" class="footer__nav-link">News</a>
+                <a href="#contact" class="footer__nav-link">Contact</a>
+              </div>
+              <div class="footer__nav-column">
+                <a href="#" class="footer__nav-link">Facebook</a>
+                <a href="#" class="footer__nav-link">Instagram</a>
+              </div>
+            </nav>
+
+            <a href="#trails" class="btn btn--red">Book Now</a>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__copyright">
+            © 2025 by Alpine Veil<br />
+            Powered and secured by <a href="#">Wix</a>
+          </div>
+          <button
+            class="footer__go-up"
+            onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+          >
+            Go Up
+          </button>
+        </div>
+      </div>
+    </footer>
+    <!-- Chat Button -->
+    <button
+      class="chat-button"
+      onclick="alert('Chat feature would open here!')"
+    >
+      Let's Chat!
+    </button>
+
+    <script>
+      function toggleLike(button) {
+        const likeCount = button.querySelector('.like-count');
+        const heartIcon = button.querySelector('.heart-icon');
+
+        let count = parseInt(likeCount.textContent);
+
+        if (heartIcon.classList.contains('liked')) {
+          // Unlike
+          count--;
+          heartIcon.classList.remove('liked');
+          likeCount.classList.remove('liked');
+        } else {
+          // Like
+          count++;
+          heartIcon.classList.add('liked');
+          likeCount.classList.add('liked');
+        }
+
+        likeCount.textContent = count;
+      }
+    </script>
+  </body>
+</html>
