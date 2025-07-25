@@ -1,4 +1,28 @@
 /* ===== ENHANCED RESPONSIVE DESIGN ===== */
+/* ===== CSS VARIABLES ===== */
+:root {
+  /* Colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-dark-gray: #1c1c1c;
+  --color-light-gray: #999999;
+  --color-red: #ff2929;
+  --color-red-hover: #e63939;
+
+  /* Typography */
+  --font-primary: 'Nunito Sans', sans-serif;
+  --font-secondary: 'Montserrat', sans-serif;
+
+  /* Spacing */
+  --nav-height: 9rem;
+  --container-width: 80%;
+  --container-max-width: 300rem;
+
+  /* Transitions */
+  --transition-fast: 0.3s ease;
+  --transition-medium: 0.5s ease;
+  --transition-slow: 0.6s ease;
+}
 
 /* Large Desktop (1200px and up) - Default styles already cover this */
 @media (min-width: 1200px) {
@@ -14,25 +38,6 @@
 @media (max-width: 1199px) {
   :root {
     --container-width: 90%;
-  }
-
-  .navigation__logo {
-    left: 4rem;
-    width: 130px;
-    height: 180px;
-  }
-
-  .navigation__logo-img {
-    width: 100px;
-    margin-top: 45px;
-  }
-
-  .navigation__item {
-    margin-left: 3rem;
-  }
-
-  .navigation__profile {
-    margin: 0 3rem;
   }
 
   .hero__title {
@@ -65,40 +70,6 @@
   :root {
     --nav-height: 8rem;
     --container-width: 95%;
-  }
-
-  .navigation {
-    height: var(--nav-height);
-    justify-content: center;
-    padding: 0 2rem;
-  }
-
-  .navigation__logo {
-    position: static;
-    width: 120px;
-    height: 160px;
-    margin-right: auto;
-  }
-
-  .navigation__logo-img {
-    width: 90px;
-    margin-top: 35px;
-  }
-
-  .navigation__menu {
-    margin: 0 2rem;
-  }
-
-  .navigation__item {
-    margin-left: 2rem;
-  }
-
-  .navigation__link {
-    font-size: 1.6rem;
-  }
-
-  .navigation__profile {
-    margin: 0;
   }
 
   .hero {
@@ -206,42 +177,6 @@
 
   :root {
     --nav-height: 7rem;
-  }
-
-  .navigation {
-    height: var(--nav-height);
-    flex-wrap: wrap;
-    padding: 1rem 2rem;
-  }
-
-  .navigation__logo {
-    width: 100px;
-    height: 140px;
-  }
-
-  .navigation__logo-img {
-    width: 80px;
-    margin-top: 25px;
-  }
-
-  .navigation__logo-title {
-    font-size: 1.2rem;
-  }
-
-  .navigation__logo-subtitle {
-    font-size: 1rem;
-  }
-
-  .navigation__menu {
-    margin: 0 1rem;
-  }
-
-  .navigation__item {
-    margin-left: 1.5rem;
-  }
-
-  .navigation__link {
-    font-size: 1.5rem;
   }
 
   .hero {
@@ -415,21 +350,6 @@
 
 /* Mobile Large (481px to 640px) */
 @media (max-width: 640px) {
-  .navigation {
-    padding: 0.5rem 1rem;
-  }
-
-  .navigation__menu {
-    order: 3;
-    width: 100%;
-    justify-content: center;
-    margin-top: 1rem;
-  }
-
-  .navigation__item {
-    margin: 0 1rem;
-  }
-
   .hero__content {
     bottom: 3rem;
     padding: 0 2rem;
@@ -478,34 +398,6 @@
 @media (max-width: 480px) {
   html {
     font-size: 54%; /* 8.64px */
-  }
-
-  :root {
-    --nav-height: auto;
-  }
-
-  .navigation {
-    height: auto;
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .navigation__logo {
-    margin-bottom: 1rem;
-  }
-
-  .navigation__menu {
-    width: 100%;
-    justify-content: space-around;
-    margin: 0;
-  }
-
-  .navigation__item {
-    margin: 0;
-  }
-
-  .navigation__profile {
-    margin-top: 1rem;
   }
 
   .hero {
@@ -793,21 +685,6 @@
   .chat-button {
     padding: 0.8rem 1.2rem;
     font-size: 1.3rem;
-  }
-}
-
-/* Ultra-wide screens (1400px and up) */
-@media (min-width: 1400px) {
-  .navigation__logo {
-    left: 10rem;
-  }
-
-  .navigation__item {
-    margin-left: 6rem;
-  }
-
-  .navigation__profile {
-    margin: 0 6rem;
   }
 }
 

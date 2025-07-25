@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us Modal</title>
     <link rel="stylesheet" href="/css/contact.css" />
+    <script defer src="/js/test.js"></script>
   </head>
   <body>
-    <button class="demo-button" onclick="openModal()">Open Contact Form</button>
-
     <div class="modal-overlay" id="modalOverlay">
       <div class="modal">
-        <button class="close-btn" onclick="closeModal()">&times;</button>
+        <button class="close-btn">&times;</button>
 
         <h1 class="modal-title">Contact Us</h1>
 
@@ -59,7 +58,9 @@
             ></textarea>
           </div>
 
-          <button type="submit" class="submit-btn">Submit</button>
+          <div class="btn-submit-container">
+            <button type="submit" class="submit-btn">Submit</button>
+          </div>
         </form>
 
         <div class="contact-info">
