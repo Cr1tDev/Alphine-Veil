@@ -233,8 +233,8 @@ body {
 }
 
 .card {
-  background: white;
-  border-radius: 12px;
+  background: var(--primary-color);
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -256,6 +256,7 @@ body {
 
 .card-content {
   padding: 16px;
+  color: var(--secondary-color);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -267,8 +268,8 @@ body {
   align-items: center;
   gap: 8px;
   margin-bottom: 12px;
-  font-size: 12px;
-  color: #666;
+  font-size: 1.4rem;
+  color: var(--secondary-color);
   position: relative;
 }
 
@@ -295,15 +296,15 @@ body {
 .stat-item {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   font-size: 14px;
-  color: #666;
+  color: var(--secondary-color);
 }
 
 .stat-icon {
-  width: 16px;
-  height: 16px;
-  opacity: 0.7;
+  width: 20px;
+  height: 20px;
+  /* opacity: 0.7; */
 }
 
 .like-btn {
@@ -411,7 +412,7 @@ body {
 }
 
 .footer__container {
-  max-width: 80%;
+  max-width: 60%;
   margin: 0 auto;
   padding: 0 2rem;
 }
