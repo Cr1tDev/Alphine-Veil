@@ -63,7 +63,7 @@ body {
 /* ===== BUTTON STYLES ===== */
 .btn {
   display: inline-block;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   text-decoration: none;
   border-radius: 3px;
   font-size: 1.7rem;
