@@ -239,10 +239,14 @@ body {
 }
 
 .snowfall-img {
-  background-image: url(/img/hiking-through-snow.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: left;
+  width: 100%;
+  height: 100%;
+}
+
+.img-snowfall {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .description-title {
@@ -257,25 +261,12 @@ body {
   font-weight: 300;
 }
 
-.adventure-img {
-  background-image: url(/img/red-cabin-snowy-forest.jpg);
-  background-attachment: initial;
-  background-size: cover;
-  background-position: center;
-}
 .adventure-description,
 .safety-description {
   background-color: var(--primary-color);
   color: var(--secondary-color);
   text-align: center;
   align-content: center;
-}
-
-.safety-img {
-  background-image: url(/img/poles-goggles-hats.jpg);
-  background-attachment: initial;
-  background-size: cover;
-  background-position: center;
 }
 
 .gallery-box {
@@ -454,4 +445,539 @@ body {
 .chat-button::before {
   content: '💬';
   font-size: 1.6rem;
+}
+
+/* ===== RESPONSIVE MEDIA QUERIES FOR ABOUT PAGE ===== */
+
+/* Large Desktop (1400px and up) */
+@media screen and (min-width: 1400px) {
+  .container {
+    width: 65%;
+    max-width: 1400px;
+  }
+
+  .about-title {
+    font-size: 6.5rem;
+  }
+
+  .about-subtitle {
+    font-size: 2rem;
+    width: 600px;
+  }
+
+  .description-title {
+    font-size: 3.5rem;
+  }
+
+  .description-subtitle {
+    font-size: 1.6rem;
+    width: 50%;
+  }
+
+  .gallery-title {
+    font-size: 6.5rem;
+  }
+
+  .gallery-box {
+    width: 85%;
+    gap: 25px;
+  }
+
+  .main {
+    height: 3500px;
+  }
+}
+
+/* Desktop (1200px - 1399px) */
+@media screen and (max-width: 1399px) {
+  .navigation__logo {
+    left: 4rem;
+  }
+
+  .container {
+    width: 75%;
+  }
+
+  .about-subtitle {
+    width: 550px;
+  }
+
+  .description-subtitle {
+    width: 60%;
+  }
+
+  .gallery-box {
+    width: 85%;
+    gap: 20px;
+  }
+}
+
+/* Tablet Landscape (992px - 1199px) */
+@media screen and (max-width: 1199px) {
+  .navigation__item {
+    margin-left: 3rem;
+  }
+
+  .navigation__profile {
+    margin: 0 3rem;
+  }
+
+  .container {
+    width: 85%;
+  }
+
+  .about-title {
+    font-size: 5rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.8rem;
+    width: 500px;
+  }
+
+  .description-title {
+    font-size: 2.8rem;
+  }
+
+  .description-subtitle {
+    font-size: 1.5rem;
+    width: 65%;
+  }
+
+  .gallery-title {
+    font-size: 5rem;
+  }
+
+  .about-box {
+    grid-template-rows: repeat(3, 600px);
+  }
+
+  .gallery-box {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 350px);
+    width: 90%;
+    gap: 18px;
+  }
+
+  .main {
+    height: 3200px;
+  }
+}
+
+/* Tablet Portrait (768px - 991px) */
+@media screen and (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .navigation {
+    height: 10rem;
+    justify-content: space-between;
+  }
+
+  .navigation__logo {
+    position: static;
+    width: 120px;
+    height: 180px;
+    padding: 0.5rem;
+  }
+
+  .navigation__logo-img {
+    width: 100px;
+    margin-top: 45px;
+  }
+
+  .navigation__menu {
+    gap: 2rem;
+  }
+
+  .navigation__item {
+    margin-left: 2rem;
+  }
+
+  .navigation__profile {
+    margin: 0 1rem;
+  }
+
+  .header {
+    margin-top: 8rem;
+    height: 400px;
+  }
+
+  .container {
+    width: 95%;
+    margin: 0 auto 80px auto;
+  }
+
+  .about-title {
+    font-size: 4.5rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.7rem;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .main {
+    height: auto;
+    padding-bottom: 50px;
+  }
+
+  .about-box {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    gap: 0;
+  }
+
+  .about-box > div {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem;
+  }
+
+  .snowfall-description,
+  .adventure-description,
+  .safety-description {
+    text-align: center;
+  }
+
+  .description-title {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .description-subtitle {
+    font-size: 1.6rem;
+    width: 80%;
+    max-width: 600px;
+    text-align: left;
+    line-height: 1.6;
+  }
+
+  .snowfall-img,
+  .adventure-img,
+  .safety-img {
+    min-height: 350px;
+    padding: 0;
+  }
+
+  .img-snowfall {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gallery-title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .gallery-box {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 300px);
+    width: 100%;
+    gap: 15px;
+  }
+
+  .footer__nav-container {
+    gap: 3rem;
+  }
+
+  .footer__nav {
+    gap: 4rem;
+  }
+
+  .footer__container {
+    max-width: 90%;
+  }
+}
+
+/* Mobile Large (576px - 767px) */
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 50%;
+  }
+
+  .navigation__logo {
+    width: 100px;
+    height: 140px;
+    margin-bottom: 1rem;
+  }
+
+  .navigation__logo-img {
+    width: 80px;
+    margin-top: 35px;
+  }
+
+  .navigation__item {
+    margin-left: 1rem;
+  }
+
+  .header {
+    margin-top: calc(7rem + 2rem);
+    height: 350px;
+    padding: 2rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+    margin: 0 auto 60px auto;
+  }
+
+  .about-title {
+    font-size: 3.5rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.6rem;
+    width: 100%;
+  }
+
+  .about-box > div {
+    min-height: 300px;
+    padding: 2rem 1rem;
+  }
+
+  .description-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .description-subtitle {
+    font-size: 1.5rem;
+    width: 90%;
+  }
+
+  .snowfall-img,
+  .adventure-img,
+  .safety-img {
+    min-height: 280px;
+  }
+
+  .gallery-title {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .gallery-box {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 250px);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 15px;
+  }
+
+  .img--context {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .footer__nav {
+    gap: 2rem;
+  }
+
+  .footer__nav-column {
+    gap: 1rem;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .chat-button {
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile Small (480px and below) */
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 45%;
+  }
+
+  .navigation {
+    padding: 0.5rem;
+  }
+
+  .navigation__logo {
+    width: 90px;
+    height: 120px;
+  }
+
+  .navigation__logo-img {
+    width: 70px;
+    margin-top: 25px;
+  }
+
+  .header {
+    height: 250px;
+  }
+
+  .about-title {
+    font-size: 3rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .about-box > div {
+    min-height: 250px;
+    padding: 1.5rem 1rem;
+  }
+
+  .description-title {
+    font-size: 2.2rem;
+  }
+
+  .description-subtitle {
+    font-size: 1.4rem;
+    width: 95%;
+  }
+
+  .snowfall-img,
+  .adventure-img,
+  .safety-img {
+    min-height: 220px;
+  }
+
+  .gallery-title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .gallery-box {
+    grid-template-rows: repeat(8, 200px);
+    max-width: 350px;
+    gap: 12px;
+  }
+
+  .chat-button {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.4rem;
+  }
+}
+
+/* Extra Small Mobile (360px and below) */
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 40%;
+  }
+
+  .navigation__logo {
+    width: 80px;
+    height: 100px;
+  }
+
+  .navigation__logo-img {
+    width: 60px;
+    margin-top: 20px;
+  }
+
+  .header {
+    height: 280px;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .about-box > div {
+    min-height: 220px;
+    padding: 1rem;
+  }
+
+  .description-title {
+    font-size: 2rem;
+  }
+
+  .description-subtitle {
+    font-size: 1.3rem;
+    width: 100%;
+  }
+
+  .snowfall-img,
+  .adventure-img,
+  .safety-img {
+    min-height: 180px;
+  }
+
+  .gallery-title {
+    font-size: 2.5rem;
+  }
+
+  .gallery-box {
+    grid-template-rows: repeat(8, 180px);
+    max-width: 300px;
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* Specific fixes for content ordering and layout */
+@media screen and (max-width: 991px) {
+  .about-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Ensure proper order of content sections */
+  .snowfall-description {
+    order: 1;
+  }
+  .snowfall-img {
+    order: 2;
+  }
+  .adventure-img {
+    order: 3;
+  }
+  .adventure-description {
+    order: 4;
+  }
+  .safety-description {
+    order: 5;
+  }
+  .safety-img {
+    order: 6;
+  }
+}
+
+/* Gallery specific improvements */
+@media screen and (max-width: 767px) {
+  .gallery-box .box__img:nth-child(n + 9) {
+    display: none; /* Hide extra gallery items on very small screens if needed */
+  }
+}
+
+/* Ensure images maintain aspect ratio */
+@media screen and (max-width: 991px) {
+  .img-snowfall,
+  .img--context {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 }

@@ -1,13 +1,47 @@
+:root {
+  /* Colors */
+  --color-white: #ffffff;
+  --primary-color: #f7f7f7;
+  --secondary-color: #1c1c1c;
+
+  --color-black: #000000;
+  --color-light-gray: #999999;
+  --color-red: #ff2929;
+  --color-red-hover: #e63939;
+
+  /* Typography */
+  --font-primary: 'Nunito Sans', sans-serif;
+  --font-secondary: 'Montserrat', sans-serif;
+
+  /* Spacing */
+  --nav-height: 9rem;
+  --container-width: 70%;
+  --container-max-width: 300rem;
+
+  /* Transitions */
+  --transition-fast: 0.3s ease;
+  --transition-medium: 0.5s ease;
+  --transition-slow: 0.6s ease;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%; /* 10px base for easy rem calculations */
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial,
-    sans-serif;
-  background-color: #f7f7f7;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  line-height: 1.7;
+  background-image: url(/img/parallax-background.png);
+  background-size: cover;
+  background-position: center;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -15,19 +49,14 @@ body {
   min-height: 100vh;
 }
 
-.demo-button {
-  background-color: #e74c3c;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.demo-button:hover {
-  background-color: #c0392b;
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.63);
 }
 
 .modal-overlay {
@@ -39,21 +68,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
   transition: all 0.3s ease;
-  opacity: 1;
-  visibility: visible;
 }
 
 .modal {
-  background-color: #2c2c2c;
-  border-radius: 12px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
   padding: 40px;
-  width: 90%;
-  max-width: 600px;
-  color: white;
+  width: 100%;
+  max-width: 800px;
+  color: var(--primary-color);
   position: relative;
   transform: scale(0.9);
   transition: transform 0.3s ease;
@@ -65,12 +89,12 @@ body {
 
 .close-btn {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 25px;
+  right: 25px;
   background: none;
   border: none;
-  color: white;
-  font-size: 24px;
+  color: var(--primary-color);
+  font-size: 3.5rem;
   cursor: pointer;
   width: 30px;
   height: 30px;
@@ -86,19 +110,24 @@ body {
 }
 
 .modal-title {
-  font-size: 48px;
-  font-weight: bold;
-  color: #e74c3c;
+  font-size: 5.5rem;
+  color: var(--color-red);
+  font-family: var(--font-secondary);
+  font-weight: 700;
   margin-bottom: 20px;
   text-align: center;
 }
 
 .modal-description {
   text-align: center;
-  color: #cccccc;
+  color: var(--primary-color);
   margin-bottom: 40px;
-  line-height: 1.5;
-  font-size: 16px;
+  font-size: 1.5rem;
+}
+
+form {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .form-row {
@@ -118,13 +147,16 @@ body {
 
 .form-label {
   display: block;
-  margin-bottom: 8px;
-  color: #ffffff;
-  font-size: 14px;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.margin-top {
+  margin-top: 15px;
 }
 
 .required {
-  color: #e74c3c;
+  color: var(--color-red);
 }
 
 .form-input {
@@ -132,9 +164,9 @@ body {
   background: none;
   border: none;
   border-bottom: 2px solid #555;
-  padding: 12px 0;
-  color: white;
-  font-size: 16px;
+  padding: 10px 0;
+  color: var(--primary-color);
+  font-size: 1.5rem;
   transition: border-color 0.3s;
 }
 
@@ -152,12 +184,11 @@ body {
   background: none;
   border: none;
   border-bottom: 2px solid #555;
-  padding: 12px 0;
+  padding: 10px 0;
   color: white;
-  font-size: 16px;
+  font-size: 1.5rem;
   resize: none;
-  height: 80px;
-  font-family: inherit;
+  height: 100px;
   transition: border-color 0.3s;
 }
 
@@ -177,14 +208,14 @@ body {
 }
 
 .submit-btn {
-  width: 80%;
-  background-color: #e74c3c;
-  color: white;
+  width: 60%;
+  background-color: var(--color-red);
+  color: var(--primary-color);
   border: none;
   padding: 15px;
-  font-size: 16px;
+  font-size: 1.7rem;
   font-weight: 600;
-  border-radius: 6px;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -196,7 +227,7 @@ body {
 .contact-info {
   text-align: center;
   color: #cccccc;
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 1.8;
 }
 

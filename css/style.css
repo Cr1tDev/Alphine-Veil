@@ -51,7 +51,8 @@ body {
 
 .text-center {
   text-align: center;
-  grid-area: 2 / 2;
+  width: 100%;
+  margin-top: 30px;
 }
 
 .flex-center {
@@ -64,7 +65,7 @@ body {
 .btn {
   padding: 1rem 2rem;
   text-decoration: none;
-  border-radius: 3px;
+  border-radius: 2px;
   font-size: 1.7rem;
   font-weight: 300;
   transition: all var(--transition-medium);
@@ -75,7 +76,6 @@ body {
 .btn--primary {
   background-color: var(--color-white);
   color: var(--color-black);
-  border: 1px solid transparent;
 }
 
 .btn--primary:hover {
@@ -253,8 +253,11 @@ body {
   text-align: center;
   color: var(--color-white);
   max-width: 800px;
-  position: relative;
-  bottom: 5rem;
+  height: 45%;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
 }
 
 .hero__title {
@@ -267,7 +270,7 @@ body {
   font-size: 1.7rem;
   font-weight: 300;
   max-width: 550px;
-  margin: 0px auto 4rem auto;
+  margin-bottom: 4.5rem;
   line-height: 1.6;
 }
 
@@ -312,7 +315,8 @@ body {
 
 .trails__grid {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: baseline;
   gap: 5.5rem 2rem;
   font-size: 1.5rem;
   font-weight: 200;
@@ -399,12 +403,22 @@ body {
 
 .testimonial {
   width: var(--container-width);
-  height: 500px;
+  height: 1330px;
+  align-items: center;
+  justify-content: space-between;
   display: flex;
+  flex-direction: column;
   color: var(--color-white);
   position: absolute;
   top: -20%;
   left: 10%;
+  z-index: 10;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-direction: row;
+  height: 40%;
 }
 
 .testimonial__content {
@@ -464,6 +478,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   position: relative;
+  z-index: 1;
 }
 
 .parallax-section::before {
@@ -474,18 +489,17 @@ body {
   right: 0;
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.8);
-  /* z-index: -1; */
+  z-index: 1;
 }
 
 .news {
   width: var(--container-width);
   display: flex;
   flex-direction: column;
+  flex: 1;
+  gap: 20px;
+  justify-content: flex-end;
   align-items: center;
-  position: absolute;
-  bottom: 0;
-  top: 40%;
-  transform: translate(15%, 26%);
 }
 
 .news__header {
@@ -499,7 +513,7 @@ body {
   font-size: 5.5rem;
   font-weight: 700;
   font-family: var(--font-secondary);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .news__subtitle {
@@ -512,10 +526,9 @@ body {
 .news__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 5rem 2.5rem;
+  gap: 2.4rem;
   width: 100%;
   max-width: 1000px;
-  /* margin-bottom: 8rem; */
 }
 
 .news-card {
