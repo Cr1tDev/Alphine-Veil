@@ -177,6 +177,10 @@ body {
   transform: translateY(-1px);
 }
 
+.navigation__link.active {
+  color: #ff2929;
+}
+
 .navigation__profile {
   margin: 0 5rem;
 }
