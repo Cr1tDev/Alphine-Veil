@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/trails.css" />
+    <script defer src="/js/transition.js"></script>
     <title>Trails</title>
   </head>
   <body>
@@ -63,7 +64,7 @@
         </p>
       </div>
     </header>
-    <main class="main">
+    <main class="main page-slide-transition">
       <div class="container trail">
         <div class="trail-box">
           <div class="trail-img-container">
@@ -163,5 +164,45 @@
     >
       Let's Chat!
     </button>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Find all contact links
+        const contactLinks = document.querySelectorAll('a[href*="contact"]');
+
+        contactLinks.forEach(link => {
+          link.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // Get the current page URL to return to
+            const currentUrl = window.location.href;
+
+            // Construct contact URL with return parameter
+            const contactUrl =
+              '/pages/contact.html?return=' + encodeURIComponent(currentUrl);
+
+            // Navigate to contact page
+            window.location.href = contactUrl;
+          });
+        });
+
+        // Also handle any buttons or elements with contact-related classes
+        const contactButtons = document.querySelectorAll(
+          '.contact-btn, [data-contact], .footer__nav-link[href*="contact"]'
+        );
+
+        contactButtons.forEach(button => {
+          button.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const currentUrl = window.location.href;
+            const contactUrl =
+              '/pages/contact.html?return=' + encodeURIComponent(currentUrl);
+
+            window.location.href = contactUrl;
+          });
+        });
+      });
+    </script>
+    <script src="/js/nav-effect.js"></script>
   </body>
 </html>

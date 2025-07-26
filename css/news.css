@@ -34,6 +34,7 @@
 html {
   font-size: 62.5%; /* 10px base for easy rem calculations */
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -41,6 +42,103 @@ body {
   font-weight: 400;
   line-height: 1.7;
   background-color: var(--color-white);
+  transition: opacity 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+}
+
+/* Transition states */
+body.fade-out {
+  opacity: 0;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
+/* Prevent interaction during transitions */
+body.transitioning {
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Loading bar */
+.page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #ff4444, #ff8888);
+  z-index: 9999;
+  transform: translateX(-100%);
+  transition: transform 600ms ease-out;
+}
+
+.page-loader.loading {
+  transform: translateX(0);
+}
+
+/* Navigation link hover effects during transitions */
+body.transitioning .navigation__link {
+  pointer-events: none;
+}
+
+/* Smooth hover states for navigation */
+.navigation__link {
+  transition: all 300ms ease;
+  position: relative;
+}
+
+.navigation__link:hover {
+  transform: translateY(-1px);
+}
+
+/* Add a subtle glow effect during transition */
+body.fade-out::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  z-index: 999;
+  pointer-events: none;
+}
+
+/* Ensure images don't flicker during transition */
+img {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Smooth transitions for main content areas */
+.hero,
+.trails,
+.features,
+.content-section,
+main {
+  transition: opacity 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.fade-out .hero,
+body.fade-out .trails,
+body.fade-out .features,
+body.fade-out .content-section,
+body.fade-out main {
+  opacity: 0;
+}
+
+/* Optional: Add a subtle slide effect */
+.page-slide-transition {
+  transform: translateY(0);
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.fade-out .page-slide-transition {
+  transform: translateY(-20px);
+  opacity: 0;
 }
 
 /* ===== BUTTON STYLES ===== */

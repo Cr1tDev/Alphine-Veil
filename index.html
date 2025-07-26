@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alpine Veil - Winter Tours</title>
-
     <!-- External Stylesheets -->
     <link
       rel="stylesheet"
@@ -24,6 +22,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <script defer src="/js/transition.js"></script>
+    <title>Alpine Veil - Winter Tours</title>
   </head>
 
   <body>
@@ -89,7 +89,7 @@
       </div>
     </section>
 
-    <main>
+    <main class="page-slide-transition">
       <!-- Trails Section -->
       <section class="trails" id="trails">
         <div class="trails__container">
@@ -376,65 +376,44 @@
     </button>
 
     <script>
-      // Simple JavaScript for enhanced user experience
       document.addEventListener('DOMContentLoaded', function () {
-        // Smooth scrolling for navigation links
-        const navLinks = document.querySelectorAll('a[href^="#"]');
+        // Find all contact links
+        const contactLinks = document.querySelectorAll('a[href*="contact"]');
 
-        navLinks.forEach(link => {
+        contactLinks.forEach(link => {
           link.addEventListener('click', function (e) {
             e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
 
-            if (targetSection) {
-              const offsetTop =
-                targetSection.getBoundingClientRect().top +
-                window.pageYOffset -
-                90;
+            // Get the current page URL to return to
+            const currentUrl = window.location.href;
 
-              window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth',
-              });
-            }
+            // Construct contact URL with return parameter
+            const contactUrl =
+              '/pages/contact.html?return=' + encodeURIComponent(currentUrl);
+
+            // Navigate to contact page
+            window.location.href = contactUrl;
           });
         });
 
-        // Heart animation for news cards
-        const heartButtons = document.querySelectorAll(
-          '.news-card__stat--likes'
+        // Also handle any buttons or elements with contact-related classes
+        const contactButtons = document.querySelectorAll(
+          '.contact-btn, [data-contact], .footer__nav-link[href*="contact"]'
         );
 
-        heartButtons.forEach(button => {
-          button.addEventListener('click', function () {
-            this.classList.toggle('liked');
-            const count = this.querySelector('span');
-            const currentCount = parseInt(count.textContent);
+        contactButtons.forEach(button => {
+          button.addEventListener('click', function (e) {
+            e.preventDefault();
 
-            if (this.classList.contains('liked')) {
-              count.textContent = currentCount + 1;
-            } else {
-              count.textContent = Math.max(0, currentCount - 1);
-            }
+            const currentUrl = window.location.href;
+            const contactUrl =
+              '/pages/contact.html?return=' + encodeURIComponent(currentUrl);
+
+            window.location.href = contactUrl;
           });
-        });
-
-        // Add scroll effect to navigation
-        let lastScrollY = window.scrollY;
-
-        window.addEventListener('scroll', function () {
-          const navigation = document.querySelector('.navigation');
-
-          if (window.scrollY > lastScrollY && window.scrollY > 100) {
-            navigation.style.transform = 'translateY(-100%)';
-          } else {
-            navigation.style.transform = 'translateY(0)';
-          }
-
-          lastScrollY = window.scrollY;
         });
       });
     </script>
+    <script src="/js/nav-effect.js"></script>
   </body>
 </html>
