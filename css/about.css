@@ -104,11 +104,11 @@ body.fade-out main {
 }
 
 /* Optional: Add a subtle slide effect */
-.page-slide-transition {
+/* .page-slide-transition {
   transform: translateY(0);
   transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 600ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
 body.fade-out .page-slide-transition {
   transform: translateY(-20px);
@@ -287,9 +287,17 @@ body.fade-out .page-slide-transition {
   align-content: center;
 }
 
+.fix-img {
+  background-image: url(/img/hiking-through-snow.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 .snowfall-img {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .img-snowfall {

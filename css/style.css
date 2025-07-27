@@ -129,11 +129,11 @@ body.fade-out main {
 }
 
 /* Optional: Add a subtle slide effect */
-.page-slide-transition {
+/* .page-slide-transition {
   transform: translateY(0);
   transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 600ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
 body.fade-out .page-slide-transition {
   transform: translateY(-20px);
@@ -392,12 +392,11 @@ body.fade-out .page-slide-transition {
   height: 70%;
   min-height: 300px;
   width: 100%;
-  background-image: url(/img/parallax-background.png);
+  background-image: url(/img/parallax-background.webp);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
-  z-index: 1;
 }
 
 .parallax-section::before {
@@ -408,7 +407,6 @@ body.fade-out .page-slide-transition {
   right: 0;
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.8);
-  z-index: 1;
 }
 
 .news {
