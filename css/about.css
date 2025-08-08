@@ -242,7 +242,7 @@ body.fade-out .page-slide-transition {
 }
 
 .container {
-  width: var(--container-width);
+  width: 80%;
   margin: 0 auto 100px auto;
 }
 
@@ -480,8 +480,8 @@ body.fade-out .page-slide-transition {
 /* Large Desktop (1400px and up) */
 @media screen and (min-width: 1400px) {
   .container {
-    width: 65%;
-    max-width: 1400px;
+    width: 75%;
+    max-width: 1500px;
   }
 
   .about-title {
