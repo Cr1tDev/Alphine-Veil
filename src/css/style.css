@@ -157,7 +157,7 @@ body.fade-out .page-slide-transition {
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: -1;
+  z-index: 0; /* keep behind content but not negative to avoid being under body background */
   overflow: hidden;
 }
 
@@ -176,6 +176,7 @@ body.fade-out .page-slide-transition {
   display: flex;
   gap: 10px;
   flex-direction: column;
+  z-index: 1; /* ensure content sits above the video */
 }
 
 .hero__title {
