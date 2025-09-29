@@ -703,3 +703,162 @@
     font-size: 1.4rem;
   }
 }
+
+/* Booking Page Styles */
+@media screen and (min-width: 1400px) {
+  .main {
+    width: 70%;
+  }
+
+  .main-content {
+    gap: 50px;
+  }
+
+  .date-time-section,
+  .service-details {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .main {
+    width: 80%;
+  }
+
+  .main-content {
+    grid-template-columns: 1fr 320px;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .main {
+    width: 90%;
+  }
+
+  .main-content {
+    grid-template-columns: 1fr 300px;
+    gap: 25px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    padding-top: 7rem;
+  }
+
+  .main {
+    width: 95%;
+  }
+
+  .main-content {
+    gap: 20px;
+  }
+
+  .date-time-section {
+    max-width: 600px;
+  }
+
+  .service-details {
+    max-width: 600px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 6rem 15px 2rem;
+    height: auto;
+  }
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .header {
+    margin-bottom: 25px;
+    height: auto;
+  }
+
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .header p {
+    font-size: 1.4rem;
+  }
+
+  .date-time-section,
+  .service-details {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+
+  .calendar td {
+    padding: 1px;
+  }
+
+  .date-cell {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 5rem 10px 1rem;
+  }
+
+  .header h1 {
+    font-size: 2.8rem;
+  }
+
+  .back-button {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+
+  .date-time-section,
+  .service-details {
+    padding: 1.6rem;
+  }
+
+  .calendar td {
+    padding: 0;
+  }
+
+  .date-cell {
+    width: 28px;
+    height: 28px;
+    font-size: 1.2rem;
+  }
+
+  .month-year {
+    font-size: 1.5rem;
+  }
+
+  .timezone-selector {
+    font-size: 1.3rem;
+  }
+
+  .service-name {
+    font-size: 1.4rem;
+  }
+
+  .check-availability-btn,
+  .next-btn {
+    padding: 10px 16px;
+    font-size: 1.1rem;
+  }
+}
