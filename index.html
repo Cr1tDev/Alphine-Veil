@@ -12,9 +12,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
     />
-    <link rel="stylesheet" href="/css/shared.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/media-query.css" />
+    <link rel="stylesheet" href="./src/css/shared.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="stylesheet" href="./src/css/media-query.css" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,7 +23,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <script defer src="/js/transition.js"></script>
+    <script defer src="./src/js/transition.js"></script>
     <title>Alpine Veil - Winter Tours</title>
   </head>
 
@@ -31,9 +31,9 @@
     <!-- Navigation -->
     <nav class="navigation">
       <div class="navigation__logo">
-        <a href="../index.html"
+        <a href=""
           ><img
-            src="/img/veil-logo-removebg-1.png"
+            src="./src/img/veil-logo-removebg-1.png"
             alt="Alpine Veil Logo"
             class="navigation__logo-img"
         /></a>
@@ -43,16 +43,18 @@
 
       <ul class="navigation__menu">
         <li class="navigation__item">
-          <a href="/pages/about.html" class="navigation__link">About</a>
+          <a href="./src/pages/about.html" class="navigation__link">About</a>
         </li>
         <li class="navigation__item">
-          <a href="/pages/trails.html" class="navigation__link">Trails</a>
+          <a href="./src/pages/trails.html" class="navigation__link">Trails</a>
         </li>
         <li class="navigation__item">
-          <a href="/pages/news.html" class="navigation__link">News</a>
+          <a href="./src/pages/news.html" class="navigation__link">News</a>
         </li>
         <li class="navigation__item">
-          <a href="/pages/contact.html" class="navigation__link">Contact</a>
+          <a href="./src/pages/contact.html" class="navigation__link"
+            >Contact</a
+          >
         </li>
       </ul>
 
@@ -73,8 +75,8 @@
     <section class="hero">
       <div class="hero__video">
         <video autoplay muted loop>
-          <source src="/img/video-mountain.mp4" type="video/mp4" />
-          <source src="/img/video-mountain.webm" type="video/webm" />
+          <source src="./src/img/video-mountain.mp4" type="video/mp4" />
+          <source src="./src/img/video-mountain.webm" type="video/webm" />
           Your browser is not supported!
         </video>
       </div>
@@ -86,7 +88,9 @@
           pristine alpine landscapes. Create unforgettable memories in nature's
           winter wonderland.
         </p>
-        <a href="/pages/trails.html" class="btn btn--primary">Book a Trail</a>
+        <a href="./src/pages/trails.html" class="btn btn--primary"
+          >Book a Trail</a
+        >
       </div>
     </section>
 
@@ -95,7 +99,27 @@
       <section class="trails" id="trails">
         <div class="trails__container">
           <div class="trails__image">
-            <img src="/img/ski.webp" alt="Ski" />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  ./src/img/optimized/ski-480.avif   480w,
+                  ./src/img/optimized/ski-800.avif   800w,
+                  ./src/img/optimized/ski-1200.avif 1200w
+                "
+                sizes="(max-width: 600px) 480px, (max-width: 1000px) 800px, 1200px"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  ./src/img/optimized/ski-480.webp   480w,
+                  ./src/img/optimized/ski-800.webp   800w,
+                  ./src/img/optimized/ski-1200.webp 1200w
+                "
+                sizes="(max-width: 600px) 480px, (max-width: 1000px) 800px, 1200px"
+              />
+              <img src="./src/img/ski.webp" alt="Ski" loading="lazy" />
+            </picture>
           </div>
 
           <div class="trails__content">
@@ -108,7 +132,9 @@
                 <p>$80</p>
               </div>
               <div class="trail-item__button">
-                <a href="/pages/book.html" class="btn btn--red">Book Now</a>
+                <a href="./src/pages/book.html" class="btn btn--red"
+                  >Book Now</a
+                >
               </div>
 
               <div class="trail-item__content">
@@ -117,7 +143,9 @@
                 <p>$120</p>
               </div>
               <div class="trail-item__button">
-                <a href="/pages/book.html" class="btn btn--red">Book Now</a>
+                <a href="./src/pages/book.html" class="btn btn--red"
+                  >Book Now</a
+                >
               </div>
 
               <div class="trail-item__content">
@@ -126,7 +154,9 @@
                 <p>$80</p>
               </div>
               <div class="trail-item__button">
-                <a href="/pages/book.html" class="btn btn--red">Book Now</a>
+                <a href="./src/pages/book.html" class="btn btn--red"
+                  >Book Now</a
+                >
               </div>
 
               <div class="trail-item__content">
@@ -135,7 +165,9 @@
                 <p>$120</p>
               </div>
               <div class="trail-item__button">
-                <a href="/pages/book.html" class="btn btn--red">Book Now</a>
+                <a href="./src/pages/book.html" class="btn btn--red"
+                  >Book Now</a
+                >
               </div>
             </div>
           </div>
@@ -153,24 +185,42 @@
 
           <div class="features__grid">
             <div class="feature-item">
-              <img src="/img/adventure.webp" alt="Adventure icon" />
+              <img
+                src="./src/img/adventure.webp"
+                alt="Adventure icon"
+                loading="lazy"
+              />
               <h3 class="feature-item__title">Adventure</h3>
             </div>
             <div class="feature-item">
-              <img src="/img/experience.webp" alt="Safety icon" />
+              <img
+                src="./src/img/experience.webp"
+                alt="Safety icon"
+                loading="lazy"
+              />
               <h3 class="feature-item__title">Safety</h3>
             </div>
             <div class="feature-item">
-              <img src="/img/meamories.webp" alt="Memories icon" />
+              <img
+                src="./src/img/meamories.webp"
+                alt="Memories icon"
+                loading="lazy"
+              />
               <h3 class="feature-item__title">Memories</h3>
             </div>
             <div class="feature-item">
-              <img src="/img/roadmap.webp" alt="Experience icon" />
+              <img
+                src="./src/img/roadmap.webp"
+                alt="Experience icon"
+                loading="lazy"
+              />
               <h3 class="feature-item__title">Experience</h3>
             </div>
           </div>
 
-          <a href="/pages/about.html" class="btn btn--secondary">Learn More</a>
+          <a href="./src/pages/about.html" class="btn btn--secondary"
+            >Learn More</a
+          >
         </div>
       </section>
 
@@ -234,7 +284,31 @@
                 </div>
               </div>
               <div class="testimonial__image">
-                <img src="/img/hikers.webp" alt="Hikers" />
+                <picture>
+                  <source
+                    type="image/avif"
+                    srcset="
+                      ./src/img/optimized/hikers-480.avif   480w,
+                      ./src/img/optimized/hikers-800.avif   800w,
+                      ./src/img/optimized/hikers-1200.avif 1200w
+                    "
+                    sizes="(max-width: 600px) 480px, (max-width: 1000px) 800px, 1200px"
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./src/img/optimized/hikers-480.webp   480w,
+                      ./src/img/optimized/hikers-800.webp   800w,
+                      ./src/img/optimized/hikers-1200.webp 1200w
+                    "
+                    sizes="(max-width: 600px) 480px, (max-width: 1000px) 800px, 1200px"
+                  />
+                  <img
+                    src="./src/img/hikers.webp"
+                    alt="Hikers"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
             </div>
             <!-- News Section -->
@@ -250,7 +324,11 @@
               <div class="news__grid">
                 <article class="news-card">
                   <div class="news-card__image">
-                    <img src="/img/winter-hike.webp" alt="Winter hiking" />
+                    <img
+                      src="./src/img/winter-hike.webp"
+                      alt="Winter hiking"
+                      loading="lazy"
+                    />
                   </div>
                   <div class="news-card__content">
                     <h3 class="news-card__title">
@@ -287,7 +365,11 @@
 
                 <article class="news-card">
                   <div class="news-card__image">
-                    <img src="/img/snow-storm.webp" alt="Snow storm" />
+                    <img
+                      src="./src/img/snow-storm.webp"
+                      alt="Snow storm"
+                      loading="lazy"
+                    />
                   </div>
                   <div class="news-card__content">
                     <h3 class="news-card__title">
@@ -324,7 +406,11 @@
 
                 <article class="news-card">
                   <div class="news-card__image">
-                    <img src="/img/righway-forest.webp" alt="Forest path" />
+                    <img
+                      src="./src/img/righway-forest.webp"
+                      alt="Forest path"
+                      loading="lazy"
+                    />
                   </div>
                   <div class="news-card__content">
                     <h3 class="news-card__title">Top Winter Navigation Tips</h3>
@@ -358,7 +444,7 @@
                 </article>
               </div>
               <div class="text-center">
-                <a href="/pages/news.html" class="btn btn--secondary"
+                <a href="./src/pages/news.html" class="btn btn--secondary"
                   >Read More</a
                 >
               </div>
@@ -381,10 +467,16 @@
           <div class="footer__nav-container">
             <nav class="footer__nav">
               <div class="footer__nav-column">
-                <a href="/pages/about.html" class="footer__nav-link">About</a>
-                <a href="/pages/trails.html" class="footer__nav-link">Trails</a>
-                <a href="/pages/news.html" class="footer__nav-link">News</a>
-                <a href="/pages/contact.html" class="footer__nav-link"
+                <a href="./src/pages/about.html" class="footer__nav-link"
+                  >About</a
+                >
+                <a href="./src/pages/trails.html" class="footer__nav-link"
+                  >Trails</a
+                >
+                <a href="./src/pages/news.html" class="footer__nav-link"
+                  >News</a
+                >
+                <a href="./src/pages/contact.html" class="footer__nav-link"
                   >Contact</a
                 >
               </div>
@@ -394,7 +486,7 @@
               </div>
             </nav>
 
-            <a href="/pages/trails.html" class="btn btn--red">Book Now</a>
+            <a href="./src/pages/trails.html" class="btn btn--red">Book Now</a>
           </div>
         </div>
 
@@ -419,12 +511,12 @@
     </button>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
+      document.addEventListener("DOMContentLoaded", function () {
         // Find all contact links
         const contactLinks = document.querySelectorAll('a[href*="contact"]');
 
-        contactLinks.forEach(link => {
-          link.addEventListener('click', function (e) {
+        contactLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
             e.preventDefault();
 
             // Get the current page URL to return to
@@ -432,7 +524,8 @@
 
             // Construct contact URL with return parameter
             const contactUrl =
-              '/pages/contact.html?return=' + encodeURIComponent(currentUrl);
+              "/src/pages/contact.html?return=" +
+              encodeURIComponent(currentUrl);
 
             // Navigate to contact page
             window.location.href = contactUrl;
@@ -444,20 +537,21 @@
           '.contact-btn, [data-contact], .footer__nav-link[href*="contact"]'
         );
 
-        contactButtons.forEach(button => {
-          button.addEventListener('click', function (e) {
+        contactButtons.forEach((button) => {
+          button.addEventListener("click", function (e) {
             e.preventDefault();
 
             const currentUrl = window.location.href;
             const contactUrl =
-              '/pages/contact.html?return=' + encodeURIComponent(currentUrl);
+              "/src/pages/contact.html?return=" +
+              encodeURIComponent(currentUrl);
 
             window.location.href = contactUrl;
           });
         });
       });
     </script>
-    <script src="/js/nav-effect.js"></script>
-    <script src="/js/slider.js"></script>
+    <script defer src="./src/js/nav-effect.js"></script>
+    <script defer src="./src/js/slider.js"></script>
   </body>
 </html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/shared.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <title>Contact Us Modal</title>
+    <script defer src="../js/contact-modal.js"></script>
+  </head>
+  <body>
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal">
+        <button class="close-btn" type="button">&times;</button>
+
+        <h1 class="modal-title">Contact Us</h1>
+
+        <p class="modal-description">
+          For tour enquiries or any questions, please use the form<br />
+          below and we will get back to you.
+        </p>
+
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">
+                First name <span class="required">*</span>
+              </label>
+              <input type="text" name="firstName" class="form-input" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">
+                Last name <span class="required">*</span>
+              </label>
+              <input type="text" name="lastName" class="form-input" required />
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">
+              Email <span class="required">*</span>
+            </label>
+            <input type="email" name="email" class="form-input" required />
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label margin-top">Subject</label>
+            <input type="text" name="subject" class="form-input" />
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label margin-top">
+              Leave us a message... <span class="required">*</span>
+            </label>
+            <textarea
+              name="message"
+              class="form-textarea"
+              required
+              placeholder="Type your message here..."
+            ></textarea>
+          </div>
+
+          <div class="btn-submit-container">
+            <button type="submit" class="submit-btn">Submit</button>
+          </div>
+        </form>
+
+        <div class="contact-info">
+          <div>Address: 500 Terry Francine Street San Francisco, CA 94158</div>
+          <div>
+            Mail:
+            info@mysite.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tel:
+            123-456-7890
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Find all contact links
+        const contactLinks = document.querySelectorAll('a[href*="contact"]');
+
+        contactLinks.forEach(link => {
+          link.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // Get the current page URL to return to
+            const currentUrl = window.location.href;
+
+            // Construct contact URL with return parameter
+            const contactUrl =
+              './contact.html?return=' + encodeURIComponent(currentUrl);
+
+            // Navigate to contact page
+            window.location.href = contactUrl;
+          });
+        });
+
+        // Also handle any buttons or elements with contact-related classes
+        const contactButtons = document.querySelectorAll(
+          '.contact-btn, [data-contact], .footer__nav-link[href*="contact"]'
+        );
+
+        contactButtons.forEach(button => {
+          button.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const currentUrl = window.location.href;
+            const contactUrl =
+              './contact.html?return=' + encodeURIComponent(currentUrl);
+
+            window.location.href = contactUrl;
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
