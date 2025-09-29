@@ -139,6 +139,7 @@
 
   .trails__grid {
     gap: 4rem 2rem;
+    padding: 1rem;
   }
 
   .features {
@@ -283,7 +284,7 @@
 
   .trails__grid {
     gap: 3rem;
-    text-align: center;
+    padding: 2rem;
   }
 
   .trail-item__button {
