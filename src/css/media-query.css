@@ -706,10 +706,6 @@
 
 /* Booking Page Styles */
 @media screen and (min-width: 1400px) {
-  .main {
-    width: 70%;
-  }
-
   .main-content {
     gap: 50px;
   }
